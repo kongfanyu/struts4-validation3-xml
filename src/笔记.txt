@@ -1,0 +1,28 @@
+1. 客户端校验 client   javascript  第一道防线
+2. 服务器端校验  在Action中实现 业务校验            第二道防线
+2.1 直接在业务方法中进行校验 ,存在的问题 校验的代码和业务带整合在一起
+不分主次。
+2.2 实现 validate方法 
+优势在于 校验代码和业务代码分离，可以专注于业务代码。
+问题:每个方法都校验，但是每个方法需要校验的业务不一样
+2.3 实现validateXxx方法 可以实现针对具体方法分别验证
+
+3.配置文件验证  案例 ProductAction4.java
+基于xml的校验，
+3.1 xml文件的命名 ActionName-validation.xml  示例 ProductAction4-validation.xml
+3.2 xml文件放在和Action同一个包
+3.3 xml文件中用不同校验器进行校验
+3.4 可以使用struts的表单标签进行显示错误信息
+3.5 错误信息最好国际化
+
+优势:可以把校验代码和业务代码分离
+问题:多增加一个维护文件
+
+注意：对象属性的验证，实体类和校验的XML文件必须在同一个包中
+
+Administrator
+Administrator@BBOCJHRS46G6HEN
+
+
+
+    

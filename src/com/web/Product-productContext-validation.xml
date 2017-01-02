@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE validators PUBLIC 
+  		"-//Apache Struts//XWork Validator 1.0//EN"
+  		"http://struts.apache.org/dtds/xwork-validator-1.0.3.dtd">
+  		
+<validators>
+	<field name="birth">
+		<field-validator type="required">
+			<message>生产日期不能为空</message>
+		</field-validator>
+			<field-validator type="date">
+				<param name="max">2016-12-31</param>
+				<param name="min">2016-01-01</param>
+				<message>生产日期必须在2016年</message>
+			</field-validator>
+		</field>
+	<field name="name">
+		<field-validator type="requiredstring">
+		    <param name="trim">true</param>
+			<message>Name Required</message>
+		</field-validator>
+		
+	</field>
+</validators>  		
+
+
